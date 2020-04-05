@@ -8,13 +8,15 @@ class App extends Component {
     super();
     this.state = {
       newDate: '',
-      birthday: '1980-04-04'
+      birthday: '1980-04-04',
+      showStats: false
     }
   }
 
   changeBirthday() {
     this.setState({
-      birthday: this.state.newDate
+      birthday: this.state.newDate,
+      showStats: true
     });
   }
 
@@ -31,7 +33,15 @@ class App extends Component {
             Submit
           </Button>
         </Form>
-        <AgeStats date={this.state.birthday} />
+        {
+          this.state.showStats ?
+            <div className="fade age-stats">
+              <AgeStats date={this.state.birthday} />
+            </div>
+          :
+            <div></div>
+        }
+
       </div>
     );
   }
