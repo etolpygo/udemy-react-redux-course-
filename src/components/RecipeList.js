@@ -11,7 +11,7 @@ class RecipeList extends Component {
         {
           this.props.recipes.map((recipe, idx) => {
           return (
-            <RecipeItem key={idx} recipe={recipe} />
+            <RecipeItem key={idx} recipe={recipe} favoriteButton={true} />
           )
         })
       }
