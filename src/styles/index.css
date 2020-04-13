@@ -35,11 +35,17 @@ body {
   height: 100px;
 }
 
-.star {
-  cursor: pointer;
+.star-favorite {
   font-size: 20px;
   font-weight: bold;
   color: darkorange;
   -webkit-text-stroke: 1px darkorange;
+  margin-right: 15px;
+}
+
+.star-regular {
+  cursor: pointer;
+  font-size: 20px;
+  color: grey;
   margin-right: 15px;
 }
