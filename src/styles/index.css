@@ -34,3 +34,12 @@ body {
   width: 100px;
   height: 100px;
 }
+
+.star {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  color: darkorange;
+  -webkit-text-stroke: 1px darkorange;
+  margin-right: 15px;
+}
