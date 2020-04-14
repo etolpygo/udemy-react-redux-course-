@@ -1,0 +1,12 @@
+body {
+  text-align: center;
+  padding: 5%;
+  background-color: #99cccc;
+  font-family: Arial;
+}
+
+.loadMemesLink {
+  cursor: pointer;
+  font-style: italic;
+  padding: 10px;
+}
