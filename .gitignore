@@ -23,4 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # credentials
-./src/actions/secrets.js
+/src/actions/secrets.js
