@@ -5,16 +5,19 @@ import { favoriteRecipe } from '../actions'
 class RecipeItem extends Component {
   constructor() {
     super();
-    this.state = {
-      favorited: false
-    }
+    // this.state = {
+    //   favorited: false
+    // }
   }
 
   favorite(recipe) {
     this.props.favoriteRecipe(recipe);
-    this.setState({favorited: true});
+    // this.setState({favorited: true});
   }
 
+  isFavorited(recipe) {
+    return this.props.favoriteRecipes.includes(recipe);
+  }
 
   render() {
     let { recipe } = this.props;
@@ -22,7 +25,8 @@ class RecipeItem extends Component {
       <div className="recipe-item">
       {
         this.props.favoriteButton === true ?
-          this.state.favorited ?
+          // (this.state.favorited ||
+          this.isFavorited(recipe) ?
             <div className="star-favorite">&#9733;</div>
           :
             <div className="star-regular" onClick={() => this.favorite(recipe)}>&#9734;</div>
@@ -46,4 +50,8 @@ class RecipeItem extends Component {
 
 }
 
-export default connect(null, { favoriteRecipe })(RecipeItem);
+function mapStateToProps(state) {
+  return state;
+}
+
+export default connect(mapStateToProps, { favoriteRecipe })(RecipeItem);

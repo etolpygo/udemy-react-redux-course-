@@ -49,3 +49,8 @@ body {
   color: grey;
   margin-right: 15px;
 }
+
+.link {
+  position: absolute;
+  left: 30px;
+}
