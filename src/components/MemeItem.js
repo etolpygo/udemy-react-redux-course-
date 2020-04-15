@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { newMeme } from '../actions';
+import { createMeme } from '../actions';
 
 
 class MemeItem extends Component {
@@ -16,12 +16,11 @@ class MemeItem extends Component {
     console.log('this.props', this.props);
     const { text0, text1 } = this.props;
     const memeObject = {
-      // template_id: this.props.meme.id,
-      meme: this.props.meme,
+      template_id: this.props.meme.id,
       text0,
       text1
     }
-    this.props.newMeme(memeObject);
+    this.props.createMeme(memeObject);
   }
 
   render() {
@@ -43,4 +42,4 @@ class MemeItem extends Component {
 
 }
 
-export default connect(null, {newMeme})(MemeItem);
+export default connect(null, {createMeme})(MemeItem);
